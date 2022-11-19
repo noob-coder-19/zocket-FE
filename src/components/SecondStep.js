@@ -9,10 +9,12 @@ const SecondStep = (props) => {
   const { second, setSecond } = props;
 
   useEffect(() => {
-    axios.get("http://localhost:4000/api/products").then((res) => {
-      setProducts(res.data);
-      // setSecond(products[0]);
-    });
+    axios
+      .get("https://api-zocket-assignment.herokuapp.com/api/products")
+      .then((res) => {
+        setProducts(res.data);
+        // setSecond(products[0]);
+      });
   }, []);
 
   return (
@@ -25,7 +27,6 @@ const SecondStep = (props) => {
       }}
     >
       <FormTitle title="Choose your product" stepNum={2}></FormTitle>
-      SecondStep
       <Grid
         container
         direction="row"

@@ -20,9 +20,11 @@ const TableData = () => {
   const [campaigns, setCampaigns] = useState([]);
 
   const getCampaigns = async () => {
-    axios.get("http://localhost:4000/api/campaigns").then((res) => {
-      setCampaigns(res.data);
-    });
+    axios
+      .get("https://api-zocket-assignment.herokuapp.com/api/campaigns")
+      .then((res) => {
+        setCampaigns(res.data);
+      });
   };
 
   useEffect(() => {
@@ -35,9 +37,11 @@ const TableData = () => {
 
   const handleDelete = (id) => {
     // alert(id);
-    axios.delete(`http://localhost:4000/api/campaigns/${id}`).then((res) => {
-      getCampaigns();
-    });
+    axios
+      .delete(`https://api-zocket-assignment.herokuapp.com/api/campaigns/${id}`)
+      .then((res) => {
+        getCampaigns();
+      });
   };
 
   return (

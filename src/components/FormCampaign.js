@@ -43,7 +43,7 @@ const FormCampaign = () => {
     };
 
     axios
-      .post("http://localhost:4000/api/campaigns", data)
+      .post("https://api-zocket-assignment.herokuapp.com/api/campaigns", data)
       .then((res) => {
         // console.log(res);
         return navigate("/");

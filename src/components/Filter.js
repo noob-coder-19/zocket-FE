@@ -17,11 +17,7 @@ const Filter = (props) => {
     >
       {props.title ? <Typography>{props.title} : </Typography> : <></>}
       <FormControl sx={{ m: 1, minWidth: 180 }}>
-        <Select
-          value={props.state}
-          onChange={(e) => props.setStateFunction(e.target.value)}
-          displayEmpty
-        >
+        <Select value={props.state} onChange={props.handleChange} displayEmpty>
           {Object.keys(props.values).map((item, index) => {
             return (
               <MenuItem key={index} value={props.values[item]}>
@@ -35,4 +31,4 @@ const Filter = (props) => {
   );
 };
 
-export default Filter;
+export default React.memo(Filter);

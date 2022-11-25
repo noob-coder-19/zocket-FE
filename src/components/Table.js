@@ -1,9 +1,25 @@
 import { Box } from "@mui/material";
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import TableData from "./TableData";
 import TableSearch from "./TableSearch";
 
 const Table = () => {
+  const [data, setData] = useState([]);
+  const [campaigns, setCampaigns] = useState(data);
+
+  const getCampaigns = async () => {
+    axios
+      .get("https://api-zocket-assignment.herokuapp.com/api/campaigns")
+      .then((res) => {
+        setData(res.data);
+      });
+  };
+
+  useEffect(() => {
+    getCampaigns();
+  }, []);
+
   return (
     <Box
       sx={{
@@ -15,8 +31,8 @@ const Table = () => {
         borderRadius: "10px",
       }}
     >
-      <TableSearch></TableSearch>
-      <TableData></TableData>
+      <TableSearch data={data} setCampaigns={setCampaigns}></TableSearch>
+      <TableData campaigns={campaigns} getCampaigns={getCampaigns}></TableData>
     </Box>
   );
 };

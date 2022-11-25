@@ -8,7 +8,7 @@ const Platform = (props) => {
     youtube:
       "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://youtube.com&size=128",
     google:
-      "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://google.com&size=128",
+      "https://www.transparentpng.com/thumb/google-logo/colorful-google-logo-transparent-clipart-download-u3DWLj.png",
     instagram:
       "https://www.instagram.com/static/images/ico/favicon-192.png/68d99ba29cc8.png",
   };

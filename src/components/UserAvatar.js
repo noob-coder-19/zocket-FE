@@ -1,5 +1,5 @@
-import { Avatar, Button, Grid, Popover, Typography } from "@mui/material";
-import React, { useState } from "react";
+import { Avatar, Grid, Typography } from "@mui/material";
+import React from "react";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 
 const UserAvatar = () => {

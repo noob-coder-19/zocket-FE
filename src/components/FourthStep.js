@@ -20,10 +20,10 @@ const FourthStep = () => {
         p: 2,
         border: "2px solid rgba(218, 230, 255, 1)",
         borderRadius: "10px",
+        backgroundColor: "white",
       }}
     >
       <FormTitle title="Ready to go" stepNum={4}></FormTitle>
-      Fourth Step
       <Stack
         direction="row"
         justifyContent="space-between"

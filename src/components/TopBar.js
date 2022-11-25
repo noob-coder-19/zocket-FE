@@ -12,8 +12,8 @@ import RedeemIcon from "@mui/icons-material/Redeem";
 import UserAvatar from "./UserAvatar";
 
 const TopBar = () => {
-  const [notifications, setNotifications] = useState(0);
-  const [gift, setGift] = useState(0);
+  const [notifications, setNotifications] = useState(false);
+  const [gift, setGift] = useState(false);
 
   return (
     <>

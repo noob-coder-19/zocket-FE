@@ -10,26 +10,15 @@ import {
 } from "@mui/material";
 import axios from "axios";
 import moment from "moment";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import CampaignEntry from "./CampaignEntry";
 import OnOffSlider from "./OnOffSlider";
 import Platform from "./Platform";
 import StatusButton from "./StatusButton";
 
-const TableData = () => {
-  const [campaigns, setCampaigns] = useState([]);
-
-  const getCampaigns = async () => {
-    axios
-      .get("https://api-zocket-assignment.herokuapp.com/api/campaigns")
-      .then((res) => {
-        setCampaigns(res.data);
-      });
-  };
-
-  useEffect(() => {
-    getCampaigns();
-  }, []);
+const TableData = (props) => {
+  // const [campaigns, setCampaigns] = useState([]);
+  const { campaigns, getCampaigns } = props;
 
   const getFormattedDate = (date) => {
     return moment(date, "DD/MM/YYYY").format("DD MMM YYYY");
